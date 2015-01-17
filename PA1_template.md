@@ -3,14 +3,14 @@
 
 ## Loading and preprocessing the data
 
-1. Load the data (i.e. read.csv())
+1.Load the data (i.e. read.csv())
 
 
 ```r
 data <- read.csv("activity.csv")
 ```
 
-2. Process/transform the data (if necessary) into a format suitable for your analysis
+2.Process/transform the data (if necessary) into a format suitable for your analysis
 
 ```r
 data$date <- as.Date(data$date,format="%Y-%m-%d")
@@ -26,7 +26,7 @@ str(data)
 
 ## What is mean total number of steps taken per day?
 
-1. Make a histogram of the total number of steps taken each day
+1.Make a histogram of the total number of steps taken each day
 
 ```r
 library("ggplot2","stats")
@@ -46,7 +46,7 @@ print(g1)
 
 ![](figure/unnamed-chunk-3-1.png) 
 
-2. Calculate and report the mean and median total number of steps taken per day
+2.Calculate and report the mean and median total number of steps taken per day
 
 
 ```r
@@ -60,7 +60,7 @@ median_steps <- median(steps_bydate)
 ## What is the average daily activity pattern?
 
 
-1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+1.Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 
 ```r
@@ -81,7 +81,7 @@ print(g2)
 
 ![](figure/unnamed-chunk-5-1.png) 
 
-2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 
 ```r
@@ -119,7 +119,7 @@ names(data_imp) <- c("interval","steps","date")
 
         Answer : data_imp is the the dataframe with the missing data(NA) filled in.
         
-4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
+4.Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 
 ```r
@@ -151,7 +151,7 @@ The median and mean has converged, because of imputing strategy.
 
 For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
 
-1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+1.Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 
 
 ```r
@@ -169,7 +169,7 @@ str(data_imp)
 ##  $ date    : Date, format: "2012-10-01" "2012-11-23" ...
 ##  $ day     : Factor w/ 2 levels "weekday","weekend": 1 1 2 1 2 1 2 1 1 2 ...
 ```
-2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
+2.Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
 
 ```r
